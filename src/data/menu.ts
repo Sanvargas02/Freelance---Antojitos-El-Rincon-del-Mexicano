@@ -123,6 +123,78 @@ export const menuItems: MenuItem[] = [
     image: '/assets/AntijotosElRincondelMexicano_HuarachesWithMeltedCheese.webp',
     category: 'Huaraches',
   },
+  {
+    id: 'pork-carnitas-1kg',
+    title: 'Pork Carnitas 1kg',
+    description:
+      'Choice of lean meat, skin, stomach, ribs, pork belly or mixed. Includes: corn tortillas, 4 sodas, 1/2 refried beans, lemons, onion, cilantro, spicy hot sauce.',
+    price: '70.00',
+    image: '/assets/AntijotosElRincondelMexicano_PorkCanitas_1Kg.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'pork-carnitas-3-4kg',
+    title: 'Pork Carnitas 3/4kg',
+    description:
+      'Choice of lean meat, skin, stomach, ribs, pork belly or mixed. Includes: corn tortillas, 3 sodas, 1/2 refried beans, lemons, onion, cilantro, spicy hot sauce.',
+    price: '55.00',
+    image: '/assets/AntijotosElRincondelMexicano_PorkCanitas_1Kg.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'pork-carnitas-1-2kg',
+    title: 'Pork Carnitas 1/2kg',
+    description:
+      'Choice of lean meat, skin, stomach, ribs, pork belly or mixed. Includes: corn tortillas, 2 sodas, lemons, onion, cilantro, spicy hot sauce.',
+    price: '40.00',
+    image: '/assets/AntijotosElRincondelMexicano_PorkCanitas_1Kg.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'pork-carnitas-1-4kg',
+    title: 'Pork Carnitas 1/4kg',
+    description:
+      'Choice of lean meat, skin, stomach, ribs, pork belly or mixed. Includes: corn tortillas, 1 soda, lemon, onion, cilantro, spicy hot sauce.',
+    price: '20.00',
+    image: '/assets/AntijotosElRincondelMexicano_PorkCanitas_1Kg.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'lunch-tacos-pork-carnitas-4pc',
+    title: 'Lunch Tacos (4) Pork Carnitas',
+    description:
+      '4 tacos of pork carnitas. Choice of lean meat, skin, stomach, ribs, pork belly or mixed. Includes: 1 soda, lemon, onion, cilantro, spicy hot sauce.',
+    price: '25.00',
+    image: '/assets/AntijotosElRincondelMexicano_LunchTacosCarnitas_4pc.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'lunch-gorditas-pork-carnitas-3pc',
+    title: 'Lunch Gorditas (3) Pork Carnitas',
+    description:
+      '3 delicious gorditas filled with pork carnitas. Includes: 1 soda, lemon, onion, cilantro, spicy hot sauce.',
+    price: '25.00',
+    image: '/assets/AntijotosElRincondelMexicano_LunchGorditas_3Pc.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'lunch-torta-pork-carnitas',
+    title: 'Lunch Torta Pork Carnitas',
+    description:
+      'Sponge bread roll filled with pork carnitas. Includes: 1 soda, lemon, onion, cilantro, spicy hot sauce.',
+    price: '30.00',
+    image: '/assets/AntijotosElRincondelMexicano_GrilledPlatterCDMX.webp',
+    category: 'Pork Carnitas',
+  },
+  {
+    id: 'tlacoyos-3pc',
+    title: 'Tlacoyos',
+    description:
+      'Bag with 3 tlacoyos stuffed with beans or potatoes or fresh cheese, sealed in a vacuum to prepare them at home.',
+    price: '12.00',
+    image: '/assets/AntijotosElRincondelMexicano_Tlacoyos_3pc.webp',
+    category: 'Tlacoyos',
+  },
 ];
 
-export const categories = ['All', 'Barbacoa', 'Consomme', 'Lunch', 'Huaraches'];
+export const categories = ['All', 'Barbacoa', 'Consomme', 'Lunch', 'Huaraches', 'Tlacoyos', 'Pork Carnitas'];

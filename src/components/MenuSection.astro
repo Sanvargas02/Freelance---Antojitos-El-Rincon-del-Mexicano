@@ -6,6 +6,8 @@ const lambBarbacoaItems = menuItems.filter((item) =>
   ['Barbacoa', 'Consomme', 'Lunch'].includes(item.category)
 );
 const huarachesItems = menuItems.filter((item) => item.category === 'Huaraches');
+const tlacoyosItems = menuItems.filter((item) => item.category === 'Tlacoyos');
+const porkCarnitasItems = menuItems.filter((item) => item.category === 'Pork Carnitas');
 ---
 
 <section id="menu" class="menu-section">
@@ -34,6 +36,38 @@ const huarachesItems = menuItems.filter((item) => item.category === 'Huaraches')
       </div>
       <div class="menu-grid">
         {huarachesItems.map((item) => (
+          <MenuItemCard item={item} />
+        ))}
+      </div>
+    </>
+  )}
+
+  {tlacoyosItems.length > 0 && (
+    <>
+      <div class="menu-subtitle-wrap menu-subtitle-wrap--section">
+        <h3 class="menu-subtitle">TLACOYOS</h3>
+        <p class="menu-subtitle-text">
+          Blue corn tlacoyos, stuffed and vacuum sealed so you can finish them at home.
+        </p>
+      </div>
+      <div class="menu-grid">
+        {tlacoyosItems.map((item) => (
+          <MenuItemCard item={item} />
+        ))}
+      </div>
+    </>
+  )}
+
+  {porkCarnitasItems.length > 0 && (
+    <>
+      <div class="menu-subtitle-wrap menu-subtitle-wrap--section">
+        <h3 class="menu-subtitle">PORK CARNITAS</h3>
+        <p class="menu-subtitle-text">
+          Pork carnitas by the kilo and lunch specials with tacos, gorditas and torta.
+        </p>
+      </div>
+      <div class="menu-grid">
+        {porkCarnitasItems.map((item) => (
           <MenuItemCard item={item} />
         ))}
       </div>
