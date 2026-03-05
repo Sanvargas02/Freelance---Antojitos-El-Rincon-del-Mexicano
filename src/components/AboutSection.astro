@@ -1,0 +1,81 @@
+---
+---
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop"
+        alt="Restaurant interior"
+        width="600"
+        height="400"
+      />
+    </div>
+    <div class="about-content">
+      <h2 class="about-title">Nuestra historia</h2>
+      <p>
+        En El Rincón del Mexicano cocinamos con recetas que han pasado de generación en generación.
+        Ingredientes frescos, sabor auténtico y el calor de casa en cada plato.
+      </p>
+      <ul class="about-features">
+        <li>🌽 Ingredientes frescos</li>
+        <li>👨‍👩‍👧 Recetas familiares</li>
+        <li>🚚 Envío rápido</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 3rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-inner {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .about-image-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .about-image-wrap img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-title {
+    font-size: 1.75rem;
+    color: var(--color-green);
+    margin: 0 0 1rem;
+  }
+
+  .about-content p {
+    margin: 0 0 1rem;
+    color: var(--color-gray-light);
+  }
+
+  .about-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .about-features li {
+    padding: 0.35rem 0;
+    font-weight: 600;
+    color: var(--color-gray);
+  }
+
+  @media (min-width: 768px) {
+    .about-inner {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+</style>

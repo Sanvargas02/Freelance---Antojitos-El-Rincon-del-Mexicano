@@ -1,0 +1,92 @@
+---
+const address = '123 Main St, Your City';
+const phone = '(555) 123-4567';
+const mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184052623!2d-73.987429!3d40.748441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTQuNyJX!5e0!3m2!1sen!2sus!4v1234567890';
+---
+
+<section id="location" class="location">
+  <div class="location-inner">
+    <div class="location-info">
+      <h2 class="location-title">Visítanos</h2>
+      <p class="location-address">{address}</p>
+      <p class="location-phone">{phone}</p>
+      <a href="https://wa.me/5215551234567" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        💬 Chat with us on WhatsApp
+      </a>
+    </div>
+    <div class="location-map">
+      <iframe
+        src={mapEmbedUrl}
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Restaurant location"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .location {
+    padding: 3rem 1.5rem;
+    background: #f5f5f5;
+  }
+
+  .location-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .location-title {
+    font-size: 1.75rem;
+    color: var(--color-green);
+    margin: 0 0 1rem;
+  }
+
+  .location-address,
+  .location-phone {
+    margin: 0 0 0.5rem;
+    color: var(--color-gray);
+  }
+
+  .btn-whatsapp {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: #25d366;
+    color: var(--color-white);
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-whatsapp:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+  }
+
+  .location-map {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .location-map iframe {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .location-inner {
+      grid-template-columns: 1fr 1.5fr;
+    }
+
+    .location-map iframe {
+      height: 350px;
+    }
+  }
+</style>

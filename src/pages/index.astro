@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import MenuSection from '../components/MenuSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import LocationSection from '../components/LocationSection.astro';
+import Footer from '../components/Footer.astro';
+import OrderModal from '../components/OrderModal.astro';
+---
+
+<Layout title="El Rincón del Mexicano — Antojitos Mexicanos" description="Menú de antojitos mexicanos. Ordena por Uber Eats, DoorDash o WhatsApp.">
+  <Header />
+  <main>
+    <Hero />
+    <MenuSection />
+    <AboutSection />
+    <LocationSection />
+  </main>
+  <Footer />
+  <OrderModal />
+</Layout>
