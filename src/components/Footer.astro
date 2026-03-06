@@ -3,8 +3,21 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <p class="footer-logo">El Rincón del Mexicano</p>
-    <p class="footer-copy">© {new Date().getFullYear()} — Hecho con ❤️ y mucho chile</p>
+    <p class="footer-logo">Antojitos El Rincon del Mexicano</p>
+    <p class="footer-copy">© {new Date().getFullYear()} — Made with ❤️ and lots of chile</p>
+    <div class="footer-social">
+      <a href="https://instagram.com/antojitoselrincondelmexicano" target="_blank" rel="noopener noreferrer">
+        Instagram: @antojitoselrincondelmexicano
+      </a>
+      <span>·</span>
+      <a href="https://facebook.com/antojitoselrincondelmexicano" target="_blank" rel="noopener noreferrer">
+        Facebook: Antojitos El Rincon del Mexicano
+      </a>
+      <span>·</span>
+      <a href="https://www.tiktok.com/@antojitoselrincondelmexicano" target="_blank" rel="noopener noreferrer">
+        TikTok: @antojitoselrincondelmexicano
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -31,5 +44,21 @@
     margin: 0;
     font-size: 0.9rem;
     opacity: 0.9;
+  }
+
+  .footer-social {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+  }
+
+  .footer-social a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
   }
 </style>

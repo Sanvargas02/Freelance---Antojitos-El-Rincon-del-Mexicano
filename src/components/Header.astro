@@ -2,7 +2,10 @@
 ---
 
 <header class="header">
-  <a href="/" class="logo">El Rincón del Mexicano</a>
+  <a href="/" class="logo">
+    <img src="/assets/logo.png" alt="Logo" class="logo-img" />
+    <span>Antojitos El Rincon del Mexicano</span>
+  </a>
   <nav class="nav">
     <a href="#menu">Menu</a>
     <a href="#about">About</a>
@@ -31,10 +34,19 @@
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--color-green);
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
 
   .nav {
@@ -110,6 +122,11 @@
 
     .logo {
       font-size: 1.5rem;
+    }
+
+    .logo-img {
+      width: 48px;
+      height: 48px;
     }
   }
 </style>

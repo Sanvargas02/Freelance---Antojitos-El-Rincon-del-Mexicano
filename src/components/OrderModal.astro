@@ -2,8 +2,8 @@
 // Replace with your real links
 const uberEatsUrl = 'https://www.ubereats.com';
 const doorDashUrl = 'https://www.doordash.com';
-const whatsappNumber = '5215551234567'; // E.164 format, no +
-const whatsappMessage = 'Hola, me gustaría hacer un pedido.';
+const whatsappNumber = '16048300758'; // E.164 format, no +
+const whatsappMessage = 'Hi, I would like to place an order.';
 ---
 
 <div id="order-modal" class="modal" aria-hidden="true">
@@ -157,7 +157,7 @@ const whatsappMessage = 'Hola, me gustaría hacer un pedido.';
 
   function openModal(dishTitle = '') {
     if (dishNameEl) dishNameEl.textContent = dishTitle ? `Order: ${dishTitle}` : '';
-    const text = dishTitle ? `${whatsappMessage} Quisiera ordenar: ${dishTitle}.` : whatsappMessage;
+    const text = dishTitle ? `${whatsappMessage} I would like to order: ${dishTitle}.` : whatsappMessage;
     if (whatsappLink) whatsappLink.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     modal?.classList.add('is-open');
     modal?.setAttribute('aria-hidden', 'false');

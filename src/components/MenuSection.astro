@@ -10,11 +10,12 @@ const tlacoyosItems = menuItems.filter((item) => item.category === 'Tlacoyos');
 const porkCarnitasItems = menuItems.filter((item) => item.category === 'Pork Carnitas');
 const grilledPlatterItems = menuItems.filter((item) => item.category === 'Grilled Platter CDMX');
 const dessertsItems = menuItems.filter((item) => item.category === 'Desserts');
+const drinksItems = menuItems.filter((item) => item.category === 'Drinks');
 ---
 
 <section id="menu" class="menu-section">
   <div class="menu-header">
-    <h2 class="menu-title">Nuestros Antojitos</h2>
+    <h2 class="menu-title">Our Antojitos</h2>
     <div class="menu-flag">🇲🇽</div>
   </div>
 
@@ -102,6 +103,22 @@ const dessertsItems = menuItems.filter((item) => item.category === 'Desserts');
       </div>
       <div class="menu-grid">
         {dessertsItems.map((item) => (
+          <MenuItemCard item={item} />
+        ))}
+      </div>
+    </>
+  )}
+
+  {drinksItems.length > 0 && (
+    <>
+      <div class="menu-subtitle-wrap menu-subtitle-wrap--section">
+        <h3 class="menu-subtitle">DRINKS</h3>
+        <p class="menu-subtitle-text">
+          Sodas and aguas frescas to pair with your antojitos.
+        </p>
+      </div>
+      <div class="menu-grid">
+        {drinksItems.map((item) => (
           <MenuItemCard item={item} />
         ))}
       </div>

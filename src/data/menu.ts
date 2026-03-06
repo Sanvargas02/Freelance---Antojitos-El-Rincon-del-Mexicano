@@ -246,6 +246,57 @@ export const menuItems: MenuItem[] = [
     image: '/assets/AntijotosElRincondelMexicano_Conchas.webp',
     category: 'Desserts',
   },
+  {
+    id: 'coca-cola',
+    title: 'Coca-Cola',
+    description: '',
+    price: '3.00',
+    image: '/assets/Coca-Cola-2_25-L-Bottle.webp',
+    category: 'Drinks',
+  },
+  {
+    id: 'coca-cola-zero',
+    title: 'Coca-Cola Zero',
+    description: '',
+    price: '3.00',
+    image: '/assets/Coca-cola-zero.webp',
+    category: 'Drinks',
+  },
+  {
+    id: 'canada-dry',
+    title: 'Canada Dry',
+    description: '',
+    price: '3.00',
+    image: '/assets/CanadaDry-GingerAle.webp',
+    category: 'Drinks',
+  },
+  {
+    id: 'horchata-drink',
+    title: 'Horchata',
+    description: '',
+    price: '8.00',
+    image: '/assets/AntijotosElRincondelMexicano_Horchata.webp',
+    category: 'Drinks',
+  },
+  {
+    id: 'hibiscus-water',
+    title: 'Hibiscus Water',
+    description: '',
+    price: '8.00',
+    image: '/assets/AntijotosElRincondelMexicano_HibiscusWater.webp',
+    category: 'Drinks',
+  },
 ];
 
-export const categories = ['All', 'Barbacoa', 'Consomme', 'Lunch', 'Huaraches', 'Tlacoyos', 'Pork Carnitas', 'Grilled Platter CDMX', 'Desserts'];
+export const categories = [
+  'All',
+  'Barbacoa',
+  'Consomme',
+  'Lunch',
+  'Huaraches',
+  'Tlacoyos',
+  'Pork Carnitas',
+  'Grilled Platter CDMX',
+  'Desserts',
+  'Drinks',
+];
