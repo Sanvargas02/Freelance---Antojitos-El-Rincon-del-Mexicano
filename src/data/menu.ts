@@ -195,6 +195,57 @@ export const menuItems: MenuItem[] = [
     image: '/assets/AntijotosElRincondelMexicano_Tlacoyos_3pc.webp',
     category: 'Tlacoyos',
   },
+  {
+    id: 'grilled-platter-cdmx',
+    title: 'Grilled platter style CDMX',
+    description:
+      'Onion, bell pepper, chorizo, beef steak, bacon, pineapple, ham and melted cheese. Includes: 1 soda, corn tortillas. For 1 or 2 people.',
+    price: '30.00',
+    image: '/assets/AntijotosElRincondelMexicano_GrilledPlatterCDMX.webp',
+    category: 'Grilled Platter CDMX',
+  },
+  {
+    id: 'tres-leches-cake',
+    title: 'Tres leches Cake',
+    description:
+      'Exquisite and juicy individual cake of milks (vanilla or chocolate) filled with walnut and peach.',
+    price: '12.00',
+    image: '/assets/AntijotosElRincondelMexicano_TresLechesCake.webp',
+    category: 'Desserts',
+  },
+  {
+    id: 'cheesecake',
+    title: 'Cheesecake',
+    description: 'Delicious traditional and artisanal cheesecake.',
+    price: '12.00',
+    image: '/assets/AntijotosElRincondelMexicano_ChurrisCake.webp',
+    category: 'Desserts',
+  },
+  {
+    id: 'choco-flan',
+    title: 'Choco flan',
+    description:
+      'Delicious chocoflan, half bread and half neapolitan flan with an incomparable flavor.',
+    price: '12.00',
+    image: '/assets/AntijotosElRincondelMexicano_ChocoFlan.webp',
+    category: 'Desserts',
+  },
+  {
+    id: 'cornbread',
+    title: 'Cornbread',
+    description: 'Delicious traditional and artisanal cornbread.',
+    price: '12.00',
+    image: '/assets/AntijotosElRincondelMexicano_CornBread.webp',
+    category: 'Desserts',
+  },
+  {
+    id: 'conchas',
+    title: 'Traditional Mexican Conchas',
+    description: 'Traditional Mexican vanilla bread (2 pieces).',
+    price: '15.00',
+    image: '/assets/AntijotosElRincondelMexicano_Conchas.webp',
+    category: 'Desserts',
+  },
 ];
 
-export const categories = ['All', 'Barbacoa', 'Consomme', 'Lunch', 'Huaraches', 'Tlacoyos', 'Pork Carnitas'];
+export const categories = ['All', 'Barbacoa', 'Consomme', 'Lunch', 'Huaraches', 'Tlacoyos', 'Pork Carnitas', 'Grilled Platter CDMX', 'Desserts'];
