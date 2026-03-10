@@ -1,6 +1,5 @@
 ---
 const whatsappNumber = '16048300758';
-const uberEatsUrl = 'https://www.ubereats.com/ca/store/antojitos-el-rincon-del-mexicano-1605-west-5th-avenue/l8W0Bh3jXl2xUUJcw4MnxA?diningMode=DELIVERY';
 ---
 
 <!-- Floating cart button -->
@@ -47,18 +46,6 @@ const uberEatsUrl = 'https://www.ubereats.com/ca/store/antojitos-el-rincon-del-m
       >
         <span class="whatsapp-icon">💬</span>
         Send order via WhatsApp
-      </a>
-      <div class="order-divider">
-        <span>or order on</span>
-      </div>
-      <a
-        href={uberEatsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="ubereats-order-btn"
-      >
-        <span class="ubereats-icon">🍔</span>
-        Order on Uber Eats
       </a>
       <button type="button" id="clear-cart-btn" class="clear-cart-btn">
         Clear cart
@@ -296,50 +283,6 @@ const uberEatsUrl = 'https://www.ubereats.com/ca/store/antojitos-el-rincon-del-m
   }
 
   .whatsapp-icon {
-    font-size: 1.25rem;
-  }
-
-  .order-divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 0.75rem 0;
-    color: var(--color-gray-light);
-    font-size: 0.85rem;
-  }
-
-  .order-divider::before,
-  .order-divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .order-divider span {
-    padding: 0 0.75rem;
-  }
-
-  .ubereats-order-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 0.85rem 1rem;
-    background: #06c167;
-    color: var(--color-white);
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: background 0.2s, transform 0.15s;
-  }
-
-  .ubereats-order-btn:hover {
-    background: #05a757;
-    transform: translateY(-1px);
-  }
-
-  .ubereats-icon {
     font-size: 1.25rem;
   }
 
