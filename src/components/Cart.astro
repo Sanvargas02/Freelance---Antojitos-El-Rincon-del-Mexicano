@@ -1,5 +1,6 @@
 ---
 const whatsappNumber = '16048300758';
+const uberEatsUrl = 'https://www.ubereats.com/ca/store/antojitos-el-rincon-del-mexicano-1605-west-5th-avenue/l8W0Bh3jXl2xUUJcw4MnxA?diningMode=DELIVERY';
 ---
 
 <!-- Floating cart button -->
@@ -23,9 +24,19 @@ const whatsappNumber = '16048300758';
     <div id="cart-items" class="cart-items"></div>
 
     <div id="cart-footer" class="cart-footer" style="display: none;">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span id="cart-total-price">$0.00</span>
+      <div class="cart-totals">
+        <div class="cart-total-row">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Tax (5%):</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="cart-total-row cart-total-final">
+          <span>Total:</span>
+          <span id="cart-total-price">$0.00</span>
+        </div>
       </div>
       <a
         id="whatsapp-order-btn"
@@ -36,6 +47,18 @@ const whatsappNumber = '16048300758';
       >
         <span class="whatsapp-icon">💬</span>
         Send order via WhatsApp
+      </a>
+      <div class="order-divider">
+        <span>or order on</span>
+      </div>
+      <a
+        href={uberEatsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ubereats-order-btn"
+      >
+        <span class="ubereats-icon">🍔</span>
+        Order on Uber Eats
       </a>
       <button type="button" id="clear-cart-btn" class="clear-cart-btn">
         Clear cart
@@ -231,13 +254,25 @@ const whatsappNumber = '16048300758';
     padding-top: 1rem;
   }
 
-  .cart-total {
+  .cart-totals {
+    margin-bottom: 1rem;
+  }
+
+  .cart-total-row {
     display: flex;
     justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--color-gray-light);
+    padding: 0.25rem 0;
+  }
+
+  .cart-total-final {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-gray);
-    margin-bottom: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
   }
 
   .whatsapp-order-btn {
@@ -261,6 +296,50 @@ const whatsappNumber = '16048300758';
   }
 
   .whatsapp-icon {
+    font-size: 1.25rem;
+  }
+
+  .order-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.75rem 0;
+    color: var(--color-gray-light);
+    font-size: 0.85rem;
+  }
+
+  .order-divider::before,
+  .order-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .order-divider span {
+    padding: 0 0.75rem;
+  }
+
+  .ubereats-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: #06c167;
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .ubereats-order-btn:hover {
+    background: #05a757;
+    transform: translateY(-1px);
+  }
+
+  .ubereats-icon {
     font-size: 1.25rem;
   }
 
@@ -302,9 +381,13 @@ const whatsappNumber = '16048300758';
   const cartEmpty = document.getElementById('cart-empty');
   const cartItemsEl = document.getElementById('cart-items');
   const cartFooter = document.getElementById('cart-footer');
+  const cartSubtotal = document.getElementById('cart-subtotal');
+  const cartTax = document.getElementById('cart-tax');
   const cartTotalPrice = document.getElementById('cart-total-price');
   const whatsappOrderBtn = document.getElementById('whatsapp-order-btn');
   const clearCartBtn = document.getElementById('clear-cart-btn');
+
+  const TAX_RATE = 0.05; // 5% tax
 
   function updateCartUI() {
     const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
@@ -318,11 +401,11 @@ const whatsappNumber = '16048300758';
       cartEmpty.style.display = 'none';
       cartFooter.style.display = 'block';
 
-      let total = 0;
+      let subtotal = 0;
       cartItemsEl.innerHTML = cart
         .map((item) => {
           const price = item.price === '—' ? 0 : parseFloat(item.price);
-          total += price * item.qty;
+          subtotal += price * item.qty;
           return `
             <div class="cart-item" data-cart-item-id="${item.id}">
               <div class="cart-item-info">
@@ -339,6 +422,11 @@ const whatsappNumber = '16048300758';
         })
         .join('');
 
+      const tax = subtotal * TAX_RATE;
+      const total = subtotal + tax;
+
+      cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+      cartTax.textContent = `$${tax.toFixed(2)}`;
       cartTotalPrice.textContent = `$${total.toFixed(2)}`;
       updateWhatsAppLink();
     }
@@ -368,12 +456,15 @@ const whatsappNumber = '16048300758';
       return `• ${item.qty}x ${item.title}${priceText}`;
     });
 
-    const total = cart.reduce((sum, item) => {
+    const subtotal = cart.reduce((sum, item) => {
       const price = item.price === '—' ? 0 : parseFloat(item.price);
       return sum + price * item.qty;
     }, 0);
 
-    const message = `Hi! I would like to place an order:\n\n${orderLines.join('\n')}\n\nTotal: $${total.toFixed(2)}\n\nThank you!`;
+    const tax = subtotal * TAX_RATE;
+    const total = subtotal + tax;
+
+    const message = `Hi! I would like to place an order:\n\n${orderLines.join('\n')}\n\nSubtotal: $${subtotal.toFixed(2)}\nTax (5%): $${tax.toFixed(2)}\nTotal: $${total.toFixed(2)}\n\nThank you!`;
 
     whatsappOrderBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   }
