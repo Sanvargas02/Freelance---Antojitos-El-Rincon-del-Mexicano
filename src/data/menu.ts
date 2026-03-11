@@ -183,7 +183,7 @@ export const menuItems: MenuItem[] = [
     description:
       'Sponge bread roll filled with pork carnitas. Includes: 1 soda, lemon, onion, cilantro, spicy hot sauce.',
     price: '30.00',
-    image: '/assets/AntijotosElRincondelMexicano_GrilledPlatterCDMX.webp',
+    image: '/assets/Lunch-Torta-Pork-Carnitas.webp',
     category: 'Pork Carnitas',
   },
   {
